@@ -124,7 +124,7 @@ def custom_append(input_list, value):
 def custom_extend(input_list, values):
     """custom_extend(input_list, values) imitates input_list.extend(values)"""
     for item in values:
-        input_list[len(input_list):] = item
+        input_list[len(input_list):] = [item]
     return input_list
 
 def custom_insert(input_list, index, value):
