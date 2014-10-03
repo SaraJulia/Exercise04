@@ -78,15 +78,16 @@ def replace_middle(input_list):
 
 def delete_third_and_seventh(input_list):
     """Remove the third and seventh elements of the input list."""
-    input_list.pop(2)
-    input_list.pop(5)
-    return input_list
+    del input_list[2]
+    del input_list[5]
 
 def delete_middle(input_list):
     """Remove all elements from the input list except for the first two and the
     last two.
     """
     del input_list[2:-2]
+
+
 """
 Now would be a great time to ask for a code review.
 """
@@ -109,7 +110,10 @@ the test_list_operations.py file for concrete examples of expected behavior.
 
 def custom_len(input_list):
     """custom_len(input_list) imitates len(input_list)"""
-    pass
+    length = 0
+    for item in input_list:
+        length += 1
+    return length
 
 # For the next four functions, get clever using slice operations described in the first half
 def custom_append(input_list, value):
