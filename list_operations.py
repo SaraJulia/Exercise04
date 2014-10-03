@@ -140,7 +140,8 @@ def custom_insert(input_list, index, value):
 
 def custom_remove(input_list, value):
     """custom_remove(input_list, value) imitates input_list.remove(value)"""
-    pass
+    i = 0
+    for 
 
 def custom_pop(input_list):
     """custom_pop(input_list) imitates input_list.pop()"""
