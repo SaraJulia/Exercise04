@@ -1,4 +1,4 @@
-
+    
 """
 Part 1: Fundamental operations on lists
 ---------------------------------------
@@ -140,12 +140,21 @@ def custom_insert(input_list, index, value):
 
 def custom_remove(input_list, value):
     """custom_remove(input_list, value) imitates input_list.remove(value)"""
-    i = 0
-    for 
+    for i in range(custom_len(input_list)):    
+        if input_list[i] == value:
+            index = i
+            break
+    del input_list[index]
+
+
 
 def custom_pop(input_list):
     """custom_pop(input_list) imitates input_list.pop()"""
-    pass
+    last_item = input_list[-1]
+    del input_list[-1]
+    return last_item
+
+
 
 def custom_index(input_list, value):
     """custom_index(input_list, value) imitates input_list.index(value)"""
