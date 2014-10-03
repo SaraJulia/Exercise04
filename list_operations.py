@@ -197,4 +197,10 @@ def custom_equality(some_list, another_list):
     """custom_equality(some_list, another_list) imitates
     (some_list == another_list)
     """
-    pass
+    if len(some_list) != len(another_list):
+        return False
+    else:
+        for i in range(len(some_list)):
+            if some_list[i] != another_list[i]:
+                return False
+        return True
