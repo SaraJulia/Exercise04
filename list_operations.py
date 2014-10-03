@@ -131,7 +131,12 @@ def custom_insert(input_list, index, value):
     """custom_insert(input_list, index, value) imitates
     input_list.insert(index, value)
     """
-    pass
+    temp = input_list[index:]
+    input_list[index:] = [value]
+    for item in temp:
+        input_list[len(input_list):] = [item]
+    return input_list
+
 
 def custom_remove(input_list, value):
     """custom_remove(input_list, value) imitates input_list.remove(value)"""
